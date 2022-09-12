@@ -1,0 +1,59 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Maestra.master.vb" Inherits="SextingApp.Maestra" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../CSS/estilo.css" rel="stylesheet" type="text/css" />
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="contenedor">
+<%--CABECERA--%>
+            <div class="Encabezado">TFG - Ciberseguridad en menores: Sexting</div>
+
+<%--MENÚ--%>
+            <div class="Menu">
+
+               <%--INICIO BIENVENIDA--%>
+                <asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/Contenido/inicio.png"
+                    NavigateUrl="~/Inicio.aspx" CssClass="vinculo"> Inicio </asp:HyperLink>
+                <asp:HyperLink ID="HyperLink5" runat="server" CssClass="vinculo">Pantalla de Inicio</asp:HyperLink>
+
+
+               <%--JUGAR MENOR--%>
+                <asp:HyperLink ID="Hplnk" runat="server" ImageUrl="~/Contenido/menor.png"
+                    NavigateUrl="~/Preg1.aspx" CssClass="vinculo"> Menor</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="vinculo">Pregunta para Menores</asp:HyperLink>
+                
+                <%--CONSEJOS PADRES--%>
+                <asp:HyperLink ID="HyperLink3" runat="server" ImageUrl="~/Contenido/padres.png"
+                    NavigateUrl="~/Consejo1.aspx" CssClass="vinculo">Consejo</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink4" runat="server" CssClass="vinculo">Consejos para Padres</asp:HyperLink>
+
+                <%--REGLAS--%>
+                <asp:HyperLink ID="hplnkImreglas" runat="server" ImageUrl="~/Contenido/reglas.png"
+                    NavigateUrl="~/Reglas.aspx" CssClass="vinculo"> Reglas  </asp:HyperLink>
+                <asp:HyperLink ID="hplnkReglas" runat="server" CssClass="vinculo">Reglas del Juego</asp:HyperLink>
+
+
+
+            </div>
+<%--CONTENIDO CAMBIANTE--%>
+            <div class="Contenido">
+                <asp:ContentPlaceHolder ID="cphContenido" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+<%--PIE--%>
+            <div class="Pie"> Copyright: José Ramón Morales Guillot </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
